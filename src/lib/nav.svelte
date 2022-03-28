@@ -1,5 +1,5 @@
 <script>
-  // 네비 메뉴 자동 가져오기
+  // 네비 메뉴 자동 가져오기(사이드바 만들때 많이 쓴다고 함)
   const pathArr = Object.keys(import.meta.glob("../routes/**"))
 	const nav = pathArr
 		.filter(path => path.includes(".svelte") && !path.includes("__"))

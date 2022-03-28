@@ -14,7 +14,6 @@
     }
   }
 </script>
-
 <h1 class="text-4xl">parent</h1>
 
-<slot/>
+<slot />
