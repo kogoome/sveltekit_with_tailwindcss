@@ -8,7 +8,7 @@
     {title:"index", path:"/"},
     {title:"login", path:"/login"},
     {title:"csr", path:"/csr"},
-    {title:"ssr", path:"/csr_to_ssr"},
+    {title:"ssr", path:"/ssr"},
   ]
 </script>
 
@@ -25,6 +25,6 @@
 <style>
   .active {
     text-decoration: underline;
-    color: rgb(46, 94, 255);
+    color: #52a7ec;
   }
 </style>
