@@ -15,26 +15,31 @@
   }
 </script>
 
-<h1>Login</h1>
+<div class="flex justify-center mt-32">
+  <div class="bg-white rounded-lg p-3 w-72">
+    <h1 class="text-2xl text-center" >Login</h1>
+    
+    {#if !message || message == "로그인 실패"}
+      {#if message == "로그인 실패"}
+        <h1 class="text-blue-400 text-2xl">{message}</h1>
+      {/if}
+    <div class="form-control text-gray-400">
+      your ID
+      <label class="input-group">
+        <span></span>
+        <input type="text" bind:value={id} placeholder="ID" class="input input-bordered w-full text-blue-400 font-semibold">
+      </label>
+      password
+      <label class="input-group">
+        <span></span>
+        <input type="password" bind:value={password} placeholder="pw" class="input input-bordered w-full text-blue-400 font-semibold">
+      </label>
+    </div>
+    
+    <button class="btn mt-5 w-full" on:click={login}>Login</button>
+    {:else if true}
+      <h1 class="text-blue-400 text-2xl">{message}</h1>
+    {/if}
 
-{#if !message || message == "로그인 실패"}
-  {#if message == "로그인 실패"}
-    <h1 class="text-blue-400 text-2xl">{message}</h1>
-  {/if}
-<div class="form-control">
-  your ID
-  <label class="input-group">
-    <span></span>
-    <input type="text" bind:value={id} placeholder="ID" class="input input-bordered">
-  </label>
-  password
-  <label class="input-group">
-    <span></span>
-    <input type="password" bind:value={password} placeholder="pw" class="input input-bordered">
-  </label>
+  </div>
 </div>
-
-<button class="btn w-64" on:click={login}>Login</button>
-{:else if true}
-  <h1 class="text-blue-400 text-2xl">{message}</h1>
-{/if}

@@ -17,7 +17,6 @@
 					: cleanPath.replace("index", "")
 			return { title, link }
 		})
-
 	import {page} from '$app/stores'
 
   let link 
@@ -27,8 +26,8 @@
 <nav>
   <ul class="flex list-none justify-center gap-6">
     {#each nav as item}
-      <li class="font-bold text-4xl hover:text-[#52a7ec] duration-150">
-        <a class:active={link === item.link} href={item.link}>{item.title}</a>
+      <li class="font-bold hover:text-[#52a7ec] transition-all duration-500">
+        <a class:active={link === item.link} class="text-3xl" href={item.link}>{item.title}</a>
       </li>
     {/each}
   </ul>
@@ -38,5 +37,6 @@
   .active {
     text-decoration: underline;
     color: #52a7ec;
+		transition: all 1s;
   }
 </style>
