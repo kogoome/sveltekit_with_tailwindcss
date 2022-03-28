@@ -1,13 +1,11 @@
 <script>
+  // 네비 메뉴 자동 가져오기
   const pathArr = Object.keys(import.meta.glob("../routes/**"))
 	const nav = pathArr
-		// __는 포함하지 않는 .svelte 파일만 추출, 
 		.filter(path => path.includes(".svelte") && !path.includes("__"))
 		.map(path => {
-			// 이전 경로와 확장자 삭제
 			const cleanPath = path.slice(9).replace(".svelte", "")
 			const title =
-				// /index 있으면 잘라내기
 				cleanPath.includes("/index") ?
 					cleanPath.slice(1).replace("/index", "")
 					: cleanPath.slice(1)
