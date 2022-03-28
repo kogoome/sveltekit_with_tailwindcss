@@ -12,17 +12,17 @@
   export let session
 </script>
 
-{JSON.stringify(session)}
 
-<div class="m-10">
-  <button class="btn btn-outline">button</button>
-</div>
 
 <div class="drawer">
   <input id="my-drawer" type="checkbox" class="drawer-toggle">
   <div class="drawer-content">
+    <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label><br>
     <!-- Page content here -->
-    <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+    {JSON.stringify(session)}
+    <div class="m-10">
+      <button class="btn btn-outline">button</button>
+    </div>
   </div> 
   <div class="drawer-side">
     <label for="my-drawer" class="drawer-overlay"></label>
