@@ -9,8 +9,6 @@
   $: getPost().then(data => {
     post = data
   })
-
-  $: console.log(post)
 </script>
 
 <h1>get Post with CSR</h1>
